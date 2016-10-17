@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		240D53031DA319B600F758CE /* UIBarSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 240D53011DA319B600F758CE /* UIBarSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		240D530A1DA319E000F758CE /* UIBarSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D53091DA319E000F758CE /* UIBarSlider.swift */; };
+		2495E66D1DB5586900CB8FAF /* UIBarToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495E66C1DB5586900CB8FAF /* UIBarToggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		240D53011DA319B600F758CE /* UIBarSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIBarSlider.h; sourceTree = "<group>"; };
 		240D53021DA319B600F758CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		240D53091DA319E000F758CE /* UIBarSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarSlider.swift; sourceTree = "<group>"; };
+		2495E66C1DB5586900CB8FAF /* UIBarToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				240D53091DA319E000F758CE /* UIBarSlider.swift */,
 				240D53011DA319B600F758CE /* UIBarSlider.h */,
 				240D53021DA319B600F758CE /* Info.plist */,
+				2495E66C1DB5586900CB8FAF /* UIBarToggle.swift */,
 			);
 			path = UIBarSlider;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				240D530A1DA319E000F758CE /* UIBarSlider.swift in Sources */,
+				2495E66D1DB5586900CB8FAF /* UIBarToggle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				240D53081DA319B600F758CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
