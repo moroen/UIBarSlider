@@ -15,8 +15,13 @@ import UIKit
     private var myState: Bool = false
     
     public var State: Bool {
-        set {   myState = newValue
-            layoutSubviews() }
+        set {   if myState != newValue {
+                    myState = newValue
+                    layoutSubviews()
+                    sendActions(for: .valueChanged)
+                }
+            }
+            
         get { return myState }
             
     }
