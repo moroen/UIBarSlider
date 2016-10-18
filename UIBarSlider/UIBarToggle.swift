@@ -14,7 +14,7 @@ import UIKit
     
     private var myState: Bool = false
     
-    public var State: Bool {
+    public var isOn: Bool {
         set {   if myState != newValue {
                     myState = newValue
                     layoutSubviews()
@@ -50,6 +50,12 @@ import UIKit
         }
     }
     
+    @IBInspectable public var textColor: UIColor = UIColor.white {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
     @IBInspectable public var cornerRadius: CGFloat = 5 {
         didSet {
             //self.layer.cornerRadius = cornerRadius
@@ -57,6 +63,10 @@ import UIKit
             toggleLayer.cornerRadius = cornerRadius
             layoutSubviews()
         }
+    }
+    
+    public var label: UILabel = UILabel() {
+        didSet {}
     }
     
     /*
@@ -86,6 +96,13 @@ import UIKit
         
         self.addGestureRecognizer(rec)
         self.layer.addSublayer(toggleLayer)
+        
+        self.label.text = "Test"
+        self.label.adjustsFontSizeToFitWidth = true
+        // self.label.backgroundColor = UIColor.cyan
+        self.label.textAlignment = .center
+        self.addSubview(self.label)
+        
     }
 
     override public func layoutSubviews() {
@@ -109,6 +126,9 @@ import UIKit
         CATransaction.setDisableActions(true)
         
         toggleLayer.frame = CGRect(x: self.bounds.midX - myWidth/2, y: 0, width: myWidth, height: self.bounds.height)
+        
+        self.label.textColor = self.textColor
+        self.label.frame = CGRect(x: self.bounds.midX - self.toggleLayer.frame.width/2, y: 0, width: self.toggleLayer.frame.width, height: self.bounds.height)
         
         CATransaction.commit()
     }
